@@ -8,20 +8,21 @@ function parseProducts(json) {
     let data = JSON.parse(json);
     // Верните как результат функции свойство products объекта data
     let products = data.products;
+    return products;
 }
 
 // Напишите функцию renderProductsCards(json)
 // Аргументом функции является JSON
-function renderProducts(json) {
+function renderProductsCards(json) {
 }
 // Выполните функцию clearProducts - она уже написана в коде, просто вызовите ее, аргументы не требуются
 clearProducts();
 // Выполните функцию parseProducts, передав в неё json - аргумент функции и запишите результат в переменную products
 let products = parseProducts(json);
 // Запишите в переменную length значение свойства products.length
-let length = products.length;
+length = products.length;
 // Напишите цикл, в котором перебираете все products от 0 до (length - 1)
-for (let i; i < length - 1; i+=1) {
+for (let i = 0; i < length - 1; i+=1) {
     addProduct(products[i]);
 }
 // и выполняете addProduct с каждым элементом массива products (передавая элемент массива как аргумент)
